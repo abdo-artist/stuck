@@ -1,0 +1,50 @@
+// Define your spacing scale (you can customize)
+$gap-scale: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+);
+
+// Generate gap classes
+@each $key, $value in $gap-scale {
+  .gap-#{$key} {
+    gap: $value !important;
+  }
+
+  .row-gap-#{$key} {
+    row-gap: $value !important;
+  }
+
+  .col-gap-#{$key} {
+    column-gap: $value !important;
+  }
+}
+
+@mixin dark-mode {
+  // 1) Dark by class
+  html.dark & {
+    @content;
+  }
+
+  // 2) Dark system ONLY if no .dark or .light class
+  @media (prefers-color-scheme: dark) {
+    html:not(.dark):not(.light) & {
+      @content;
+    }
+  }
+}
+
+@mixin rtl-mode {
+  // 1) User choice via class
+  html.rtl & {
+    @content;
+  }
+
+  // 2) System preference fallback (optional, e.g., dir attribute or lang)
+  html[dir="rtl"] & {
+    @content;
+  }
+}

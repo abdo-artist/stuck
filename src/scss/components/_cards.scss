@@ -1,0 +1,517 @@
+.glass-card {
+    color: #fff;
+    box-sizing: border-box;
+
+    background-color: color-mix(in srgb, #1c1b3b 60%, transparent);
+    box-shadow:
+        inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
+        inset 1.8px 3px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 70%), transparent),
+        inset -2px -2px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 60%), transparent),
+        inset -3px -8px 1px -6px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 40%), transparent),
+        inset -0.3px -1px 4px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 12%), transparent),
+        inset -1.5px 2.5px 0px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+        inset 0px 3px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+        inset 2px -6.5px 1px -4px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent);
+    // 0px 1px 5px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+    // 0px 6px 16px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 8%), transparent);
+    transition:
+        background-color 400ms cubic-bezier(1, 0, 0.4, 1),
+        box-shadow 400ms cubic-bezier(1, 0, 0.4, 1);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    border: 1px solid color(srgb 1 1 1 / 0.08);
+    padding: 5px 15px;
+    margin-block: 15px;
+    height: 100%;
+    @include dark-mode {
+        border: none;
+        background-color: #13132b;
+        box-shadow: none;
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .title {
+        font-size: 4.0625rem;
+    }
+    .subtitle {
+        font-size: 1.25rem;
+    }
+    .description {
+        font-size: 0.875rem;
+        color: #c0c0c0;
+    }
+}
+.service-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, rgba($color1, 0.1), rgba($color2, 0.1));
+    .cover {
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1.43 / 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba($color2, 20%);
+            position: absolute;
+            top: 0;
+        }
+    }
+    &-body {
+        padding: 1.7rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        @extend .gap-3;
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h5 {
+                font-size: 1.25rem;
+                font-weight: bold;
+                @include dark-mode {
+                    color: #fff;
+                }
+            }
+            .label {
+                background-image: linear-gradient(45deg, $color1, $color2);
+                font-weight: bold;
+                color: #fff;
+                border-radius: 0.5rem;
+                padding: 5px 10px;
+                font-size: 1rem;
+            }
+        }
+        .description {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+            color: #807878;
+            @include dark-mode {
+                color: #fff;
+            }
+        }
+    }
+}
+// .theme-image {
+//     img {
+//         // default light image already defined in <img src="">
+//         display: block;
+//         transition: opacity 0.3s ease;
+//     }
+
+//     // Case 1 — manual dark mode toggle (e.g. <html class="dark">)
+//     .dark & img {
+//           content: var(--image);
+//     }
+
+//     // Case 2 — system dark mode preference
+//     @media (prefers-color-scheme: dark) {
+//         img {
+//             content: var(--image);
+//         }
+//     }
+// }
+.workflow-card {
+    position: relative;
+    height: 120px;
+    .counter {
+        background: linear-gradient(to bottom, color(srgb 0 0 0 / 0.1), transparent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        font-size: 9.5rem;
+        position: absolute;
+        bottom: -45px;
+        inset-inline-end: -35px;
+        @include dark-mode {
+            background: linear-gradient(to bottom, #5b5aea, rgba(#3fb7bf, 0.1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+    }
+    @include dark-mode {
+        color: #fff;
+    }
+    .icon-wrap {
+        position: absolute;
+    }
+    .icon {
+        width: 76px;
+        position: relative;
+        img {
+            width: 100%;
+            background: white;
+            aspect-ratio: 1 / 1;
+            border-radius: 16px;
+            padding: 16px;
+            position: relative;
+            z-index: 2;
+            @include dark-mode {
+                background-color: #08111e;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            background-image: linear-gradient(45deg, rgba($color2, 0.1), rgba($color1, 0.1));
+            box-shadow: 0px 20px 44px rgba($color1, 0.3);
+            transform: scale(1.3);
+        }
+    }
+    .small {
+        font-size: 0.875rem;
+    }
+}
+.case-study-card {
+    position: relative;
+    border-radius: 2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: calc(2px);
+    overflow: hidden;
+    .card-body {
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        @extend .gap-4;
+        background: linear-gradient(to bottom, color-mix(in srgb, var(--variant) 10%, white) 10%, white 100%);
+        border-radius: calc(2rem - 4px);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 1rem;
+        overflow: hidden;
+        @include dark-mode {
+            // background: linear-gradient(to bottom, #13132B 80%, transparent 100%);
+            background: #13132b;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* border width */
+        height: 100%;
+        background: linear-gradient(
+            to bottom,
+            color-mix(in srgb, var(--variant) 50%, transparent) 50%,
+            transparent 100%
+        );
+        pointer-events: none;
+        z-index: -1;
+        @include dark-mode {
+            background-color: var(--variant);
+            border-radius: 2rem;
+        }
+    }
+    .desc {
+        font-weight: bold;
+        font-size: 1rem;
+        color: color-mix(in srgb, var(--variant) 30%, black);
+        @include dark-mode {
+            color: #fff;
+        }
+    }
+    .graph {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .chat-bubble {
+            position: absolute;
+            top: -14px;
+            inset-inline-end: 40px;
+            display: inline-block;
+            border-radius: 1.3rem;
+            padding: 15px;
+            background: color-mix(in srgb, var(--variant) 30%, black);
+            color: color-mix(in srgb, var(--variant) 40%, white);
+            filter: drop-shadow(0px 3px 6.02px rgba(0, 0, 0, 0.1));
+            @include rtl-mode {
+                top: 0;
+                inset-inline-end: 73px;
+            }
+            h6 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 200;
+            }
+            &:after {
+                content: " ";
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: -6px;
+                right: auto;
+                top: 54%;
+                bottom: auto;
+                border: 11px solid;
+                border-color: color-mix(in srgb, var(--variant) 30%, black)
+                    color-mix(in srgb, var(--variant) 30%, black) transparent transparent;
+                border-radius: 0px 4px 0 0;
+                transform: rotate(-136deg);
+            }
+            &::before {
+                content: "";
+                width: 27px;
+                position: absolute;
+                aspect-ratio: 1 / 1;
+                background: var(--variant);
+                border-radius: 50%;
+                border: 4px solid #fff;
+                bottom: -33px;
+                left: 30%;
+            }
+        }
+        article {
+            text-align: center;
+            padding: 10px 20px;
+            background: color-mix(in srgb, var(--variant) 20%, white);
+            border-radius: 1rem;
+            display: inline-flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            position: absolute;
+            h3 {
+                color: var(--variant);
+                font-weight: bold;
+            }
+            p {
+                font-size: 14px;
+                color: color-mix(in srgb, var(--variant) 30%, black);
+                font-weight: 500;
+            }
+            &.base {
+                background: none;
+                align-items: start;
+                text-align: start;
+            }
+        }
+        img {
+            width: 100%;
+            transform: scale(1.4) rotate(-16deg);
+            margin: 66px 0 0;
+            @include rtl-mode {
+                transform: scale(1.4) rotate(0deg) scaleX(-1);
+            }
+            &.rotate-0 {
+                transform: scale(1.4) rotate(0deg);
+            }
+            &.chart {
+                max-width: 80%;
+                transform: scale(1);
+                margin: 0;
+            }
+        }
+    }
+    .btn-variant {
+        background: var(--variant);
+        color: #fff;
+        z-index: 1;
+        .icon {
+            color: var(--variant);
+            background: #fff;
+        }
+    }
+}
+
+.subscription-card {
+    border-radius: 2rem;
+    position: relative;
+    padding: 35px 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow: hidden;
+    @extend .gap-3;
+    background-image: url("../img/bg-pattern.png");
+    background-repeat: no-repeat;
+    background-size: 52%;
+    background-position: top right;
+    @include rtl-mode {
+        background-position: top left;
+    }
+    .card-label {
+        box-shadow: 0 2.55px 10.2px rgba(0, 0, 0, 0.4);
+        font-size: 0.625rem;
+        position: absolute;
+        top: 20px;
+        inset-inline-end: 20px;
+        padding: 5px 10px;
+        min-height: inherit;
+    }
+    &:after,
+    &::before {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+    }
+    &::before {
+        content: "";
+        width: 200px;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        background: $color2;
+        border-radius: 50%;
+        filter: blur(44px);
+        inset-inline-start: -18%;
+        top: -47px;
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        width: 300px;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        background: $color1;
+        border-radius: 50%;
+        filter: blur(70px);
+        inset-inline-start: -59%;
+        top: -140px;
+        z-index: -1;
+    }
+    .card-icon {
+        width: 45px;
+        transform: scale(1.9) translate(10px, 6px);
+        display: block;
+    }
+    .text-line {
+        font-size: 0.625rem;
+    }
+    .feat-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        @extend .gap-2;
+        li {
+            display: flex;
+            align-items: center;
+            @extend .gap-2;
+            font-size: 0.75rem;
+            .label {
+                padding: 5px 10px;
+                min-height: inherit;
+                font-size: 0.7rem;
+            }
+        }
+        .list-icon {
+            color: #333;
+            font-size: 1.25rem;
+            position: relative;
+            &:after {
+                content: "";
+                background-color: #fff;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border-radius: 50%;
+                top: 0;
+                z-index: -1;
+                inset-inline-start: 0;
+                transform: scale(0.8);
+            }
+        }
+    }
+    &:hover,
+    &.active {
+        .btn-fade {
+            background: linear-gradient(45deg, $color1, $color2);
+            box-shadow: 0 2.55px 10.2px rgba(0, 0, 0, 0.4);
+        }
+        &:after,
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.testimonial-card {
+    border: 1px solid #e3e3e3;
+    border-radius: 0.5rem;
+    background: rgba(217, 217, 217, 0.1);
+    padding: 20px;
+    height: 100%;
+    @include dark-mode {
+        background-color: #13132b;
+        border-color: rgba(#e3e3e3, 0.1);
+    }
+    .avatar {
+        color: #fff;
+        background-image: linear-gradient(45deg, $color1, $color2);
+        width: 45px;
+        aspect-ratio: 1/1;
+        display: inline-flex;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: relative;
+        height: 45px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: initial;
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgba($color2, 0.1);
+            width: 100%;
+            height: 100%;
+            transform: scale(1.2);
+            z-index: -1;
+            border-radius: 50%;
+        }
+    }
+    .name {
+        color: #000;
+        font-weight: bold;
+        margin: 0;
+        font-size: 0.9375rem;
+        @include dark-mode {
+            color: #fff;
+        }
+    }
+    .title {
+        font-size: 0.8125rem;
+        color: #7c7c7c;
+        font-weight: 500;
+    }
+    .description {
+        color: #555060;
+        font-size: 0.9375rem;
+        font-weight: 400;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* number of lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @include dark-mode {
+            color: #a09aae;
+        }
+    }
+    .rating {
+        color: #ffc300;
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<!-- STUCK landing page: documented structure and asset includes -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS: Boxicons, Bootstrap, Owl Carousel, and app styles -->
+    <link
+      href="https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/3.0.4/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
+    <link
+      id="bootstrap-link"
+      rel="stylesheet"
+      href="./src/css/vendor/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./src/css/vendor/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./src/css/vendor/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <!-- Mobile PWA meta tags for iOS Safari (status bar, capability) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <title>STUCK</title>
+  </head>
+  <body>
+    <!-- Page content wrapper -->
+    <div class="d-flex flex-column gap-3">
+      <!-- Hero: Landing header with navbar and call-to-action -->
+      <section class="bubble">
+        <div class="container pt-4">
+          <!-- Navbar: brand, nav links, language, auth buttons -->
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="shine shine-bottom"></div>
+            <div class="shine shine-top"></div>
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <!-- Brand logo -->
+                <img src="./src/img/logo.png" width="162" alt="STUCK logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item text-capitalize">
+                    <!-- Nav: Home -->
+                    <a class="nav-link active" aria-current="page" href="#">
+                      Home
+                    </a>
+                  </li>
+                  <li class="nav-item text-capitalize">
+                    <!-- Nav: About -->
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item text-capitalize">
+                    <!-- Nav: Services -->
+                    <a class="nav-link" href="#">our services</a>
+                  </li>
+                  <li class="nav-item text-capitalize">
+                    <!-- Nav: Blogs -->
+                    <a class="nav-link" href="#">blogs</a>
+                  </li>
+                  <li class="nav-item text-capitalize">
+                    <!-- Nav: How it works -->
+                    <a class="nav-link" href="#">how it works</a>
+                  </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                  <!-- Language selector -->
+                  <div class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a
+                        id="lang-toggle"
+                        class="nav-link d-inline-flex align-items-center gap-2 text-white"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span id="current-lang"> English </span>
+                        <i class="bx bx-globe-alt h5 m-0"></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <!-- Language: Arabic -->
+                          <a
+                            class="dropdown-item text-capitalize"
+                            href="#"
+                            data-lang="ar"
+                          >
+                            العربية
+                          </a>
+                        </li>
+                        <li>
+                          <!-- Language: English -->
+                          <a
+                            class="dropdown-item text-capitalize"
+                            href="#"
+                            data-lang="en"
+                          >
+                            english
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
+                  <!-- Auth and demo actions -->
+                  <!-- Button: Login -->
+                  <button class="btn btn-glass">login</button>
+                  <!-- Button: Get a demo -->
+                  <button class="btn btn-icon btn-glass">
+                    <span>get a demo</span>
+                    <i class="icon bx bx-arrow-right-stroke"></i>
+                  </button>
+                  <div class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link d-inline-flex align-items-center gap-2 text-white"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i id="currentTheme" class="bx bx-sun h5 m-0"> </i>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <!-- Language: Arabic -->
+                          <a
+                            class="dropdown-item text-capitalize"
+                            href="#"
+                            data-theme="system"
+                          >
+                            system
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-capitalize"
+                            href="#"
+                            data-theme="dark"
+                          >
+                            Dark
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-capitalize"
+                            href="#"
+                            data-theme="light"
+                          >
+                            Light
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Hero content: stats, headline, subtitle, CTA -->
+        <section class="hero-section py-5">
+          <div class="container text-white">
+            <div class="centered-col gap-4">
+              <section>
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <div class="glow-beam"></div>
+                  <span class="glow-circle"></span>
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center gap-2 my-1"
+                >
+                  <div class="avatar-group">
+                    <!-- Avatars: sample users indicating activity -->
+                    <img
+                      class="avatar"
+                      src="./src/img/avatars/1.png"
+                      alt="avatar-1"
+                    />
+                    <img
+                      class="avatar"
+                      src="./src/img/avatars/2.png"
+                      alt="avatar-2"
+                    />
+                    <img
+                      class="avatar"
+                      src="./src/img/avatars/3.png"
+                      alt="avatar-3"
+                    />
+                    <!-- Icon: More avatars -->
+                    <i class="avatar avatar-icon bx bx-plus"></i>
+                  </div>
+                  <!-- Stat: Requests counter -->
+                  <h6 class="m-0 pe-5">50,000+ Requests</h6>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <div style="width: 40%" class="d-flex align-items-center">
+                    <span class="glow-circle"></span>
+                    <div class="glow-beam reverse"></div>
+                  </div>
+                </div>
+              </section>
+              <h1 class="m-0 text-center title">
+                <i>Create Fast,</i> Culturally-Aware Content
+              </h1>
+              <div class="subtitle">
+                <h1 class="m-0">Across Languages</h1>
+              </div>
+              <p class="m-0 text-center">
+                Blending AI Efficiency with the Human Touch for Robust Content
+                Creation and Translation
+              </p>
+              <div
+                class="d-flex cta justify-content-center flex-wrap gap-3 align-items-center w-100 flex-column flex-md-row"
+              >
+                <div style="width: 20%" class="d-flex align-items-center">
+                  <div class="glow-beam"></div>
+                  <span class="glow-circle"></span>
+                </div>
+                <!-- CTA: Start now -->
+                <button class="btn btn-icon btn-gradient">
+                  <span>start now</span>
+                  <i class="icon bx bx-arrow-right-stroke"></i>
+                </button>
+                <!-- CTA: Business trial -->
+                <button class="btn btn-icon btn-glass">
+                  <span>Business? Request Free Trial</span>
+                  <i class="icon bx bx-arrow-right-stroke"></i>
+                </button>
+                <span class="glow-circle d-none d-md-inline"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Dashboard: Product mockup preview (desktop + mobile) -->
+      <section class="section-overview">
+        <div class="container">
+          <div class="mockup">
+            <!-- Dashboard mockup image -->
+            <img
+              class="theme-image"
+              data-dark="./src/img/mockup-dark.png"
+              src="./src/img/mockup.png"
+              alt="dashboard"
+            />
+            <img
+              class="mobile-mockup"
+              src="./src/img/mobile-mockup.png"
+              alt="mobile-mockup"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Clients: Logos of trusted businesses -->
+      <section class="clients-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">Valued Clients</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-1"
+              >
+                <h5 class="m-0">
+                  <b class="text-primary-dark">Trusted by Over</b>
+                  <span class="text-gradient">+50 Businesses</span>
+                </h5>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+            <div class="clients">
+              <!-- <img src="./src/img/clients/1.png" alt="client-1" /> -->
+              <!-- Client logos -->
+              <img
+                class="theme-image"
+                data-dark="./src/img/clients/2-dark.png"
+                src="./src/img/clients/2.png"
+                alt="client-2"
+              />
+              <img
+                class="theme-image"
+                data-dark="./src/img/clients/3-dark.png"
+                src="./src/img/clients/3.png"
+                alt="client-3"
+              />
+              <img
+                class="theme-image"
+                data-dark="./src/img/clients/4-dark.png"
+                src="./src/img/clients/4.png"
+                alt="client-4"
+              />
+              <img
+                class="theme-image active"
+                data-dark="./src/img/clients/5-dark.png"
+                src="./src/img/clients/5.png"
+                alt="client-5"
+              />
+              <img
+                class="theme-image"
+                data-dark="./src/img/clients/6-dark.png"
+                src="./src/img/clients/6.png"
+                alt="client-6"
+              />
+              <img
+                class="theme-image"
+                data-dark="./src/img/clients/7-dark.png"
+                src="./src/img/clients/7.png"
+                alt="client-7"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Journey: Choose between AI, Human, or Hybrid paths -->
+      <section class="journey-section py-4">
+        <div class="container">
+          <div class="wrapper">
+            <div class="centered-col gap-4">
+              <span class="title-bullet">Journeys is capital</span>
+              <section>
+                <div
+                  class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+                >
+                  <h1 class="m-0">
+                    <b class="text-primary-dark">Choose Your</b>
+                    <span class="text-gradient">journey</span>
+                  </h1>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <div style="width: 40%" class="d-flex align-items-center">
+                    <span class="glow-circle"></span>
+                    <div class="glow-beam reverse"></div>
+                  </div>
+                </div>
+              </section>
+              <div class="row w-100 mt-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="j-card mt-5">
+                    <!-- Journey card: AI path -->
+                    <span class="label">Speed-Focused</span>
+                    <div class="icon">
+                      <img src="./src/img/icons/ai.png" alt="" />
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <article>
+                        <h4 class="m-0">Fully AI</h4>
+                        <p class="m-0 mt-2 small">
+                          Process your content through AI
+                        </p>
+                      </article>
+                      <div class="cta">
+                        <i class="bx bx-arrow-right-stroke"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="j-card color-2">
+                    <!-- Journey card: Human path -->
+                    <span class="label">Quality-Focused</span>
+                    <div class="icon">
+                      <img src="./src/img/icons/human.png" alt="" />
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <article>
+                        <h4 class="m-0">Fully Human</h4>
+                        <p class="m-0 mt-2 small">
+                          Work with a dedicated expert instantly
+                        </p>
+                      </article>
+                      <div class="cta">
+                        <i class="bx bx-arrow-right-stroke"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="j-card mt-5 reverse color-3">
+                    <!-- Journey card: Hybrid path -->
+                    <span class="label">Best of Both</span>
+                    <div class="icon">
+                      <img src="./src/img/icons/hybrid.png" alt="" />
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <article>
+                        <h4 class="m-0">Hybrid</h4>
+                        <p class="m-0 mt-2 small">
+                          Start with AI, Review by Human
+                        </p>
+                      </article>
+                      <div class="cta">
+                        <i class="bx bx-arrow-right-stroke"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Impact: KPI cards showing results -->
+      <section class="impact-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet dark">Proven Impact</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0 text-center">
+                  <b class="text-white">Authentic Content.</b>
+                  <span class="text-gradient">Real Results.</span>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle white"></span>
+                  <div class="glow-beam reverse white"></div>
+                </div>
+              </div>
+            </section>
+            <div class="row w-100">
+              <div class="col-md-4">
+                <div class="card glass-card">
+                  <div class="card-body">
+                    <!-- Impact card metric -->
+                    <h1 class="title">10K+</h1>
+                    <h5 class="subtitle">Requests Submitted Annually</h5>
+                    <p class="small description mb-0">
+                      Clients get instant responses on their requests and have
+                      complete transparency on pricing, assigned expert and
+                      time-line.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card glass-card">
+                  <div class="card-body">
+                    <!-- Impact card metric -->
+                    <h1 class="title">75%</h1>
+                    <h5 class="subtitle">Time saved per project</h5>
+                    <p class="small description mb-0">
+                      Clients get instant responses on their requests and have
+                      complete transparency on pricing, assigned expert and
+                      time-line.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card glass-card">
+                  <div class="card-body">
+                    <!-- Impact card metric -->
+                    <h1 class="title">55%</h1>
+                    <h5 class="subtitle">cost reduction on content services</h5>
+                    <p class="small description mb-0">
+                      Our different journeys guarantee quality solutions that
+                      align perfectly with your budget.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services: Carousel of content offerings -->
+      <section class="services-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">Services</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0">
+                  <b class="text-primary-dark">Content Services that</b>
+                  <span class="text-gradient">Land Right</span>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- carousel -->
+        <!-- Services carousel (Owl Carousel) -->
+        <div id="serviceCarousel" class="owl-carousel owl-theme mt-5">
+          <div class="item">
+            <div class="service-card">
+              <div class="cover">
+                <!-- Service cover image -->
+                <img src="./src/img/services/1.png" alt="Translation" />
+              </div>
+              <div class="service-card-body">
+                <div class="heading">
+                  <h5>🈺 Translation</h5>
+                  <span class="label">Feature</span>
+                </div>
+                <p class="description">
+                  Crafted for Precision and enriched with contextual depth
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="service-card">
+              <div class="cover">
+                <!-- Service cover image -->
+                <img src="./src/img/services/2.png" alt="Editing" />
+              </div>
+              <div class="service-card-body">
+                <div class="heading">
+                  <h5>✍️ Editing</h5>
+                  <span class="label">New</span>
+                </div>
+                <p class="description">
+                  Polishing your content to perfection while maintaining
+                  authenticity
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="service-card">
+              <div class="cover">
+                <!-- Service cover image -->
+                <img src="./src/img/services/3.png" alt="Video Subtitling" />
+              </div>
+              <div class="service-card-body">
+                <div class="heading">
+                  <h5>🎬 Video Subtitling</h5>
+                  <span class="label">Pro</span>
+                </div>
+                <p class="description">
+                  Subtitles that read right and feel right — precise, natural,
+                  and on beat
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="service-card">
+              <div class="cover">
+                <!-- Service cover image -->
+                <img src="./src/img/services/4.png" alt="Content Writing" />
+              </div>
+              <div class="service-card-body">
+                <div class="heading">
+                  <h5>📝 Content Writing</h5>
+                </div>
+                <p class="description">
+                  Industry-specific writing rooted in local culture - not just
+                  buzzwords
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="service-card">
+              <div class="cover">
+                <!-- Service cover image -->
+                <img
+                  src="./src/img/services/5.png"
+                  alt="Dialect Localization"
+                />
+              </div>
+              <div class="service-card-body">
+                <div class="heading">
+                  <h5>🗣️ Dialect Localization</h5>
+                  <span class="label">Soon</span>
+                </div>
+                <p class="description">
+                  Content that speaks every Saudi dialect, from Hijazi to Najdi
+                  and more
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Workflow: Four-step process overview -->
+      <section class="workflow-section s-padding pt-0">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">Workflow</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0">
+                  <b class="text-primary-dark">How </b>
+                  <span class="text-gradient">STUCK?</span>
+                  <b class="text-primary-dark">Works</b>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+            <!-- Workflow steps and overview -->
+            <div class="wrapper w-100 mt-5">
+              <img src="./src/img/wave.png" class="overview" alt="" />
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="workflow-card">
+                    <div class="position-relative d-inline-block">
+                      <h5 class="d-inline-block">
+                        <b>Sign</b>
+                        <span class="text-gradient">Up</span>
+                      </h5>
+                      <span class="counter">1</span>
+                    </div>
+                    <p class="small">
+                      Create your account to access all platform features and
+                      manage your projects easily.
+                    </p>
+                    <div class="icon-wrap">
+                      <div class="icon">
+                        <img
+                          src="./src/img/icons/add-user.png"
+                          alt="add-user"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="workflow-card">
+                    <div class="position-relative d-inline-block">
+                      <h5 class="d-inline-block">
+                        <b>Make a </b>
+                        <span class="text-gradient">Request</span>
+                      </h5>
+                      <span class="counter">2</span>
+                    </div>
+                    <p class="small">
+                      Choose the service you need, share any necessary details
+                      or book a meeting.
+                    </p>
+                    <div class="icon-wrap">
+                      <div class="icon">
+                        <img
+                          src="./src/img/icons/document.png"
+                          alt="document"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="workflow-card">
+                    <div class="position-relative d-inline-block">
+                      <h5 class="d-inline-block">
+                        <b>Get</b>
+                        <span class="text-gradient">Matched</span>
+                      </h5>
+                      <span class="counter">3</span>
+                    </div>
+                    <p class="small">
+                      Get a response in 10 minutes, get matched with an expert
+                      for human-led services, and chat directly!
+                    </p>
+                    <div class="icon-wrap">
+                      <div class="icon">
+                        <img src="./src/img/icons/upload.png" alt="upload" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="workflow-card">
+                    <div class="position-relative d-inline-block">
+                      <h5 class="d-inline-block">
+                        <b>Receive </b>
+                        <span class="text-gradient">Content</span>
+                      </h5>
+                      <span class="counter">4</span>
+                    </div>
+                    <p class="small">
+                      Your content is reviewed for quality and delivered to your
+                      chat room, available for download or modifications.
+                    </p>
+                    <div class="icon-wrap">
+                      <div class="icon">
+                        <img src="./src/img/icons/website.png" alt="website" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Case Studies: Selected projects and outcomes -->
+      <section class="case-study-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">Case Studies</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0">
+                  <b class="d-block text-primary-dark">Through the Platform</b>
+                  <span class="text-gradient text-center d-block">
+                    and Beyond
+                  </span>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+            <div class="row w-100 wrapper">
+              <div class="col-md-4">
+                <div class="case-study-card" style="--variant: #0ddeab">
+                  <div class="card-body">
+                    <!-- Case study logo -->
+                    <img
+                      class="theme-image"
+                      data-dark="./src/img/logos/misk-logo-dark.png"
+                      src="./src/img/logos/misk-logo.png"
+                      width="70%"
+                      alt=""
+                    />
+                    <h6 class="desc">
+                      Community Engagement Journey for ASAAN Museum
+                    </h6>
+                    <div class="graph">
+                      <!-- Outcome bubble -->
+                      <div class="chat-bubble">
+                        <h6 class="m-0">40% Faster</h6>
+                        <p class="m-0">engagement cycle</p>
+                      </div>
+                      <!-- Outcome graph -->
+                      <img src="./src/img/graph.png" alt="graph" />
+                    </div>
+                    <button class="btn btn-icon btn-variant">
+                      <span>Read More</span>
+                      <i class="icon bx bx-arrow-right-stroke"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="case-study-card" style="--variant: #f7b82a">
+                  <div class="card-body">
+                    <!-- Case study logo -->
+                    <img
+                      class="theme-image"
+                      data-dark="./src/img/logos/qiddiya-dark.png"
+                      src="./src/img/logos/qiddiya.png"
+                      width="70%"
+                      alt="Qiddiya"
+                    />
+                    <h6 class="desc">
+                      Cultural Adaptation for Six Flags (SFQ) Qiddiya
+                    </h6>
+                    <div class="graph">
+                      <article>
+                        <h3 class="m-0">200+</h3>
+                        <p class="m-0">
+                          <i>
+                            Assets Localized for Six
+                            <span class="d-block">Flags Qiddiya</span>
+                          </i>
+                        </p>
+                      </article>
+                      <!-- Map highlight -->
+                      <img
+                        class="rotate-0"
+                        src="./src/img/map-yellow.png"
+                        alt=""
+                      />
+                    </div>
+                    <button class="btn btn-icon btn-variant">
+                      <span>Read More</span>
+                      <i class="icon bx bx-arrow-right-stroke"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="case-study-card" style="--variant: #48cfd8">
+                  <div class="card-body">
+                    <!-- Case study logo -->
+                    <img
+                      class="theme-image"
+                      data-dark="./src/img/logos/king-university-dark.png"
+                      src="./src/img/logos/king-university.png"
+                      width="70%"
+                      alt="king-university"
+                    />
+                    <h6 class="desc">
+                      Empowering KAUST with Comprehensive Translation Solutions
+                    </h6>
+                    <div class="graph justify-content-start">
+                      <article class="base">
+                        <h3 class="m-0">35%</h3>
+                        <p class="m-0">
+                          Reduced
+                          <span class="d-block">translation costs</span>
+                        </p>
+                      </article>
+                      <!-- Map highlight -->
+                      <img
+                        class="rotate-0 chart"
+                        src="./src/img/chart.png"
+                        alt=""
+                      />
+                    </div>
+                    <button class="btn btn-icon btn-variant">
+                      <span>Read More</span>
+                      <i class="icon bx bx-arrow-right-stroke"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">Available Worldwide</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0">
+                  <b class="text-primary-dark">Loved Around</b>
+                  <span class="text-gradient text-center"> The World </span>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+            <div class="map-wrapper mt-4 position-relative">
+              <img
+                data-dark="./src/img/map-dark.png"
+                src="./src/img/map-blue.png"
+                class="w-100 theme-image"
+                alt=""
+              />
+              <div class="content">
+                <button
+                  style="
+                    --border-color: #b22234;
+                    --width: 60px;
+                    --top: 26%;
+                    --start: 19%;
+                  "
+                  type="button"
+                  class="pop-btn"
+                  data-bs-toggle="popover"
+                  data-bs-placement="bottom"
+                  data-bs-custom-class="custom-pop"
+                  data-bs-html="true"
+                  data-bs-content="
+                  <div class='pop-box'>
+                    <div>
+                      <div class='pop-header'>
+                        <img src='./src/img/avatars/4.png' class='pop-img'>
+                        <div class='d-flex gap-1 flex-column'>
+                          <h3>Najdi</h3>
+                          <p>Arabic Copywriting</p>
+                          <span class='inline-block label'>+10 Years of Experience</span>
+                        </div>
+                      </div>
+                      <div class='pop-body'>
+                        <div>
+                          <p class='mb-2'>📍 Timezone:</p>
+                          <h5 class='mb-0'>Riyadh, KSA (GMT +3)</h5>
+                        </div>
+                        <span class='rating'>
+                          <i class='bx bxs-star'></i> 
+                          5.0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                "
+                >
+                  <img src="./src/img/flags/us.png" alt="" />
+                </button>
+                <button
+                  style="
+                    --border-color: #009345;
+                    --width: 74px;
+                    --top: 64%;
+                    --start: 20%;
+                  "
+                  type="button"
+                  class="pop-btn"
+                  data-bs-toggle="popover"
+                  data-bs-placement="bottom"
+                  data-bs-custom-class="custom-pop"
+                  data-bs-html="true"
+                  data-bs-content="
+                  <div class='pop-box'>
+                    <div>
+                      <div class='pop-header'>
+                        <img src='./src/img/avatars/4.png' class='pop-img'>
+                        <div class='d-flex gap-1 flex-column'>
+                          <h3>Najdi</h3>
+                          <p>Arabic Copywriting</p>
+                          <span class='inline-block label'>+10 Years of Experience</span>
+                        </div>
+                      </div>
+                      <div class='pop-body'>
+                        <div>
+                          <p class='mb-2'>📍 Timezone:</p>
+                          <h5 class='mb-0'>Riyadh, KSA (GMT +3)</h5>
+                        </div>
+                        <span class='rating'>
+                          <i class='bx bxs-star'></i> 
+                          5.0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                "
+                >
+                  <img src="./src/img/flags/brazil.png" alt="" />
+                </button>
+                <button
+                  style="
+                    --border-color: #009345;
+                    --width: 74px;
+                    --top: 38%;
+                    --start: 54%;
+                  "
+                  type="button"
+                  class="pop-btn show"
+                  data-bs-toggle="popover"
+                  data-bs-placement="bottom"
+                  data-bs-custom-class="custom-pop"
+                  data-bs-html="true"
+                  data-bs-content="
+                  <div class='pop-box'>
+                    <div>
+                      <div class='pop-header'>
+                        <img src='./src/img/avatars/4.png' class='pop-img'>
+                        <div class='d-flex gap-1 flex-column'>
+                          <h3>Najdi</h3>
+                          <p>Arabic Copywriting</p>
+                          <span class='inline-block label'>+10 Years of Experience</span>
+                        </div>
+                      </div>
+                      <div class='pop-body'>
+                        <div>
+                          <p class='mb-2'>📍 Timezone:</p>
+                          <h5 class='mb-0'>Riyadh, KSA (GMT +3)</h5>
+                        </div>
+                        <span class='rating'>
+                          <i class='bx bxs-star'></i> 
+                          5.0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                "
+                >
+                  <img src="./src/img/flags/su.png" alt="" />
+                </button>
+                <button
+                  style="
+                    --border-color: #d4483f;
+                    --width: 60px;
+                    --top: 47%;
+                    --start: 89%;
+                  "
+                  type="button"
+                  class="pop-btn"
+                  data-bs-toggle="popover"
+                  data-bs-placement="bottom"
+                  data-bs-custom-class="custom-pop"
+                  data-bs-html="true"
+                  data-bs-content="
+                  <div class='pop-box'>
+                    <div>
+                      <div class='pop-header'>
+                        <img src='./src/img/avatars/4.png' class='pop-img'>
+                        <div class='d-flex gap-1 flex-column'>
+                          <h3>Najdi</h3>
+                          <p>Arabic Copywriting</p>
+                          <span class='inline-block label'>+10 Years of Experience</span>
+                        </div>
+                      </div>
+                      <div class='pop-body'>
+                        <div>
+                          <p class='mb-2'>📍 Timezone:</p>
+                          <h5 class='mb-0'>Riyadh, KSA (GMT +3)</h5>
+                        </div>
+                        <span class='rating'>
+                          <i class='bx bxs-star'></i> 
+                          5.0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                "
+                >
+                  <img src="./src/img/flags/korea.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- subscription plans section -->
+      <section class="subscription-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet dark">Subscriptions</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0">
+                  <b class="text-white">Subscription Plans</b>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+            <div class="banner w-100">
+              <div class="glow"></div>
+              <div
+                class="d-flex justify-content-between flex-column flex-md-row gap-3 align-items-center wrapper"
+              >
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./src/img/icons/payment.png" width="54px" alt="" />
+                  <div>
+                    <h4 class="text-white mb-1">Pay As You Go</h4>
+                    <p class="text-white mb-0">
+                      Pay only when you use it — no monthly commitment.
+                    </p>
+                  </div>
+                </div>
+                <button class="btn btn-gradient rounded btn-icon">
+                  <span>Start now</span>
+                  <i class="icon bx bx-arrow-right-stroke"></i>
+                </button>
+              </div>
+              <div class="glow"></div>
+            </div>
+            <h4 class="text-line text-white">Or</h4>
+            <div class="d-flex align-items-center justify-content-center">
+              <div class="toggle-container" id="pricing-toggle">
+                <div class="slider-bg"></div>
+                <div class="toggle-btn" data-value="monthly">Monthly</div>
+                <div class="toggle-btn" data-value="save">
+                  Yearly <span class="btn btn-gradient ms-1">Save 30%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-10 mx-auto">
+              <div class="row w-100 mx-auto">
+                <div class="col-md-4">
+                  <div class="subscription-card glass-card active">
+                    <span class="card-label btn btn-gradient small">
+                      Most popular
+                    </span>
+                    <img
+                      class="card-icon"
+                      src="./src/img/icons/users.png"
+                      alt=""
+                    />
+                    <span class="btn btn-glass">For Teams</span>
+                    <h6 class="m-0">
+                      Best for established businesses
+                      <span class="d-block">(2-4 users)</span>
+                    </h6>
+                    <button class="btn btn-fade btn-icon rounded-3 w-100">
+                      <span>Get started</span>
+                      <i class="icon bx bx-arrow-right-stroke"></i>
+                    </button>
+                    <p class="text-line text-white small">TURQUOISE TREK +</p>
+                    <ul class="feat-list">
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>Free STUCK AI</span>
+                        <span class="label btn btn-glass ms-3 hover">
+                          <i class="bxr bx-check-circle"></i>
+                          Al-based
+                        </span>
+                      </li>
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>Non-Expiring</span>
+                      </li>
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>Chat search with extended history</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="subscription-card glass-card">
+                    <img
+                      class="card-icon"
+                      src="./src/img/icons/bag.png"
+                      alt=""
+                    />
+                    <span class="btn btn-glass">For Enterprises</span>
+                    <h6 class="m-0">
+                      Customized Plans for
+                      <span class="d-block">Enterprises</span>
+                    </h6>
+                    <button class="btn btn-fade btn-icon rounded-3 w-100">
+                      <span>Get started</span>
+                      <i class="icon bx bx-arrow-right-stroke"></i>
+                    </button>
+                    <p class="text-line text-white small">TURQUOISE TREK +</p>
+                    <ul class="feat-list">
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>Free STUCK AI</span>
+                        <span class="label btn btn-glass ms-3 hover">
+                          <i class="bxr bx-check-circle"></i>
+                          Al-based
+                        </span>
+                      </li>
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>Non-Expiring</span>
+                      </li>
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>Free meetings and consultation</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="subscription-card glass-card">
+                    <img
+                      class="card-icon"
+                      src="./src/img/icons/gem.png"
+                      alt=""
+                    />
+                    <span class="btn btn-glass">Custom</span>
+                    <h6 class="m-0">
+                      Customized Plans for
+                      <span class="d-block">Enterprises</span>
+                    </h6>
+                    <button class="btn btn-fade btn-icon rounded-3 w-100">
+                      <span>Get started</span>
+                      <i class="icon bx bx-arrow-right-stroke"></i>
+                    </button>
+                    <p class="text-line text-white small">TURQUOISE TREK +</p>
+                    <ul class="feat-list">
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>Unlimited STUCK AI</span>
+                        <span class="label btn btn-glass ms-3 hover">
+                          <i class="bxr bx-check-circle"></i>
+                          Al-based
+                        </span>
+                      </li>
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>Unlimited Words</span>
+                      </li>
+                      <li>
+                        <i class="bxr bx-check-circle list-icon"></i>
+                        <span>VIP Support</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- why stuck -->
+      <section class="about-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">Why STUCK?</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0">
+                  <b class="text-primary-dark">Why Choose </b>
+                  <span class="text-gradient">STUCK?</span>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+            <div class="table-responsive w-100 mt-4">
+              <table
+                class="table custom-compare-table text-center align-middle"
+              >
+                <thead>
+                  <tr>
+                    <th>Features</th>
+                    <th>
+                      <img
+                        src="./src/img/logo-dark.png"
+                        data-dark="./src/img/logo.png"
+                        alt="Stuck?"
+                        height="43"
+                        class="table-logo theme-image"
+                      />
+                    </th>
+                    <th>Traditional Agencies</th>
+                    <th>Freelancers</th>
+                    <th>AI Tools</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="text-start text-dark">Customization</td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon cross"></span></td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-start text-dark">Speed</td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon cross"></span></td>
+                    <td><span class="icon cross"></span></td>
+                    <td><span class="icon check"></span></td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-start text-dark">Flexibility</td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon cross"></span></td>
+                    <td><span class="icon cross"></span></td>
+                    <td><span class="icon check"></span></td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-start text-dark">Human Touch</td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon cross"></span></td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-start text-dark">AI Efficiency</td>
+                    <td><span class="icon check"></span></td>
+                    <td><span class="icon cross"></span></td>
+                    <td><span class="icon cross"></span></td>
+                    <td><span class="icon check"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- testimonials -->
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">Our Clients</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0">
+                  <b class="text-primary-dark">What People </b>
+                  <span class="text-gradient">Are Saying</span>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="testimonial-slider mt-4">
+          <div class="slide-track" id="testimonialsContainer"></div>
+        </div>
+      </section>
+      <!-- FAQ's -->
+      <section class="faq-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">FAQ</span>
+            <section>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2 my-2 text-center"
+              >
+                <h1 class="m-0">
+                  <b class="text-gradient">Frequently </b>
+                  <span class="text-primary-dark">Asked Questions</span>
+                </h1>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div style="width: 40%" class="d-flex align-items-center">
+                  <span class="glow-circle"></span>
+                  <div class="glow-beam reverse"></div>
+                </div>
+              </div>
+            </section>
+            <div class="row w-100 mt-4">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <div class="tab-card">
+                  <h3>Sections</h3>
+                  <ul
+                    class="d-flex flex-column gap-3 faq-tabs"
+                    id="myTab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="home-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#home"
+                        type="button"
+                        role="tab"
+                        aria-controls="home"
+                        aria-selected="true"
+                      >
+                        About the Human-led services
+                        <i class="icon bx bx-arrow-right-stroke"></i>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="profile-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="profile"
+                        aria-selected="false"
+                      >
+                        About Pricing and Payment
+                        <i class="icon bx bx-arrow-right-stroke"></i>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="contact-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#contact"
+                        type="button"
+                        role="tab"
+                        aria-controls="contact"
+                        aria-selected="false"
+                      >
+                        About AI or Data
+                        <i class="icon bx bx-arrow-right-stroke"></i>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="contact-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#contact"
+                        type="button"
+                        role="tab"
+                        aria-controls="contact"
+                        aria-selected="false"
+                      >
+                        About the Platform and Workflow
+                        <i class="icon bx bx-arrow-right-stroke"></i>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <div
+                      class="accordion d-flex gap-3 flex-column"
+                      id="accordionExample"
+                    >
+                      <div
+                        class="accordion-item"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                        id="headingOne"
+                      >
+                        <button class="accordion-button" type="button">
+                          <h2 class="accordion-header">
+                            <span class="counter">01</span>
+                            <span
+                              >Are the experts part of your team or
+                              freelancers?</span
+                            >
+                          </h2>
+                        </button>
+                        <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            Our experts are trained and vetted members of our
+                            team, possessing industry-specific expertise.
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion-item collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <button class="accordion-button" type="button">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <span class="counter">02</span>
+                            <span
+                              >How do you ensure that project deadlines are
+                              met?</span
+                            >
+                          </h2>
+                        </button>
+                        <div
+                          id="collapseTwo"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingTwo"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            <strong
+                              >This is the second item's accordion body.</strong
+                            >
+                            Our experts are trained and vetted members of our
+                            team, possessing industry-specific expertise.
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion-item collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <button class="accordion-button" type="button">
+                          <h2 class="accordion-header" id="headingThree">
+                            <span class="counter">03</span>
+                            <span
+                              >Is it possible to meet or speak directly with the
+                              experts?</span
+                            >
+                          </h2>
+                        </button>
+                        <div
+                          id="collapseThree"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingThree"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            Our experts are trained and vetted members of our
+                            team, possessing industry-specific expertise.
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion-item collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <button class="accordion-button" type="button">
+                          <h2 class="accordion-header" id="headingFour">
+                            <span class="counter">04</span>
+                            <span>
+                              How do you ensure quality and accuracy in
+                              delivered work?
+                            </span>
+                          </h2>
+                        </button>
+                        <div
+                          id="collapseFour"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingFour"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            Our experts are trained and vetted members of our
+                            team, possessing industry-specific expertise.
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion-item collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <button class="accordion-button" type="button">
+                          <h2 class="accordion-header" id="headingFive">
+                            <span class="counter">05</span>
+                            <span>
+                              What happens if I’m not satisfied with the work?
+                            </span>
+                          </h2>
+                        </button>
+                        <div
+                          id="collapseFive"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingFour"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            Our experts are trained and vetted members of our
+                            team, possessing industry-specific expertise.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    ...
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    ...
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner -->
+      <section class="banner-section s-padding">
+        <div class="container">
+          <div class="centered-col gap-4">
+            <span class="title-bullet">Get STUCK?</span>
+            <section>
+              <div
+                class="d-flex align-items-center flex-column justify-content-center gap-3"
+              >
+                <img
+                  class="theme-image"
+                  data-dark="./src/img/logo.png"
+                  src="./src/img/logo-dark.png"
+                  height="53"
+                  alt=""
+                />
+                <h1 class="m-0 text-center">
+                  <b class="text-primary-dark">Your Content & Culture</b>
+                  <span class="text-gradient text-center"> Partner</span>
+                </h1>
+                <button class="btn btn-gradient btn-icon">
+                  <span>Start now</span>
+                  <i class="icon bx bx-arrow-right-stroke"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- footer -->
+    </div>
+    <footer class="footer-section s-padding">
+      <div class="glow"></div>
+      <div class="container footer-content">
+        <div class="row">
+          <div class="col-md-3 mb-5 mb-md-0">
+            <img class="mb-3" src="./src/img/logo.png" height="63" alt="" />
+            <p class="desc">
+              Create Fast, Culturally-Aware Content Across Languages Blending AI
+              Efficiency with the Human Touch for Robust Content Creation and
+              Translation
+            </p>
+          </div>
+          <div class="col-md-2 mb-5 mb-md-0">
+            <h4 class="mb-4">Company</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">How it works</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-5 mb-md-0">
+            <h4 class="mb-4">Contact Details</h4>
+            <ul class="contact">
+              <li>
+                <i class="bx bxs-location"></i>
+                <span>
+                  <a class="ar-text" href="#"
+                    >عمان – الشميساني – شارع أبو سفيان</a
+                  >
+                </span>
+              </li>
+              <li>
+                <i class="bx bxs-phone"></i>
+                <span>
+                  <a href="tel:+966 50 784 2539">+966 50 784 2539</a>
+                </span>
+              </li>
+              <li>
+                <i class="bx bxs-envelope"></i>
+                <span>
+                  <a href="mailto:STCK?@gmail.com">STCK?@gmail.com</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4 class="mb-4">News & Update</h4>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your Email Address"
+                aria-label="Your Email Address"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-gradient px-3"
+                type="button"
+                id="button-addon2"
+              >
+                <i class="bx bxs-send"></i>
+              </button>
+            </div>
+            <div class="d-flex gap-3 mt-3 social-links align-content-center">
+              <a href="#">
+                <i class="bxl bx-youtube"></i>
+              </a>
+              <a href="#">
+                <i class="bxl bx-medium-square"></i>
+              </a>
+              <a href="#">
+                <i class="bxl bx-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="bxl bx-discord"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright p-3">
+        <div class="container text-center">
+          <p class="m-0 text-white">©2025 Stuck. All rights reserved</p>
+        </div>
+      </div>
+      <div class="glow"></div>
+    </footer>
+    <!-- testimonial-card template -->
+    <template id="item-template">
+      <div class="slide">
+        <div class="testimonial-card">
+          <div class="d-flex align-items-start gap-2 justify-content-between">
+            <div class="d-flex gap-2 align-items-center mb-4">
+              <span class="avatar"></span>
+              <div>
+                <h3 class="name mb-1"></h3>
+                <p class="title mb-0"></p>
+              </div>
+            </div>
+            <div class="rating d-flex align-items-center gap-1 py-2">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+          </div>
+          <p class="description"></p>
+        </div>
+      </div>
+    </template>
+    <!-- JS: jQuery, Bootstrap (with Popper), Owl Carousel, app logic -->
+    <!-- jQuery: required by Owl Carousel and some DOM helpers -->
+    <script src="./src/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap bundle: includes Popper for dropdowns/modals -->
+    <script src="./src/js/vendor/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel: services slider plugin -->
+    <script src="./src/js/vendor/owl.carousel.min.js"></script>
+    <!-- App script: theme handling, image switching, interactions -->
+    <script src="./src/js/main.js"></script>
+    <!--  initialize services carousel via Owl Carousel and wire UI snippets -->
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>

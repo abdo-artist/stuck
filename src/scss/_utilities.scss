@@ -1,0 +1,271 @@
+.dark-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+    overflow: hidden;
+    background-image: radial-gradient(#25235d, #050433), url("../img/bg-texture.png");
+    &::before {
+        content: "";
+        width: 200px;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        background: $color1;
+        border-radius: 50%;
+        filter: blur(70px);
+        left: -7%;
+        top: 10%;
+    }
+    &::after {
+        content: "";
+        width: 200px;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        background: $color2;
+        border-radius: 50%;
+        filter: blur(70px);
+        right: -5%;
+        bottom: 24%;
+    }
+    @include dark-mode {
+        background-image: radial-gradient($bg-dark, $bg-dark), url("../img/bg-texture.png");
+        overflow-x: clip;
+        overflow-y: visible;
+    }
+}
+.glow {
+    &-beam {
+        height: 1px;
+        width: 100%;
+        border-start-start-radius: 50px;
+        background-image: linear-gradient(45deg, rgba(165, 144, 193, 0) 0%, $color3 50%, $color1 100%);
+        @include rtl-mode {
+            transform: scaleX(-1);
+        }
+        &.white {
+            background-image: linear-gradient(45deg, rgba(165, 144, 193, 0) 0%, white 50%, white 100%);
+        }
+        &.reverse {
+            transform: scaleX(-1);
+            @include rtl-mode {
+                transform: scaleX(1);
+            }
+            // border-start-start-radius: initial;
+            // border-end-end-radius: 50%;
+            // background-image: linear-gradient(45deg, rgba(165, 144, 193, 0) 0%, $color3 50%, $color1 100%);
+        }
+    }
+    &-circle {
+        width: 8px;
+        aspect-ratio: 1/1;
+        background: $color1;
+        position: relative;
+        border-radius: 50%;
+        z-index: 1;
+        &.white {
+            background: white;
+            &::before {
+                background-color: lighten(white, 30%);
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            transform: scale(2.2);
+            background-color: lighten($color1, 30%);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.2;
+        }
+    }
+}
+.title {
+    &-bullet {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: $color2;
+        border-radius: 50px;
+        padding: 10px 20px;
+        background-image: linear-gradient(45deg, rgba($color1, 0.1), rgba($color2, 0.1));
+        &.dark {
+            background: rgba(white, 0.1);
+            color: #fff;
+        }
+        @include dark-mode {
+            color: #fff;
+        }
+    }
+}
+.centered-col {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.text-gradient {
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(90deg, #3fb7bf, #5b5aea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.text-primary-dark {
+    color: $text-primary-dark !important;
+    @include dark-mode {
+        color: #fff !important;
+    }
+}
+
+.text-line {
+    display: table;
+    white-space: nowrap;
+    margin: 0;
+    &:before,
+    &:after {
+        border-top: 1px solid rgba(#fff, 0.3);
+        content: "";
+        display: table-cell;
+        position: relative;
+        top: 0.5em;
+        width: 48%;
+    }
+    &:before {
+        right: 2%;
+    }
+    &:after {
+        left: 2%;
+    }
+}
+
+// .toggle-container {
+//     position: relative;
+//     display: inline-flex;
+//     background: rgba(#fff, 0.1);
+//     padding: 4px;
+//     border-radius: 50px;
+//     gap: 0;
+//     width: max-content;
+// }
+.toggle-container {
+    position: relative;
+    display: inline-flex;
+    background: rgba(#fff, 0.1);
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.toggle-btn {
+    position: relative;
+    z-index: 2;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    .btn {
+        padding: 5px 10px;
+        min-height: inherit;
+        font-size: 0.7rem;
+    }
+}
+
+.slider-bg {
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    height: calc(100% - 16px);
+    border-radius: 999px;
+    background: $color2;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.custom-compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    .text-dark {
+        color: #545377 !important;
+        font-weight: bold;
+        font-size: 1.125rem;
+        @include dark-mode {
+            color: #fff !important;
+        }
+    }
+    thead {
+        vertical-align: middle;
+        tr {
+            th {
+                color: #545377;
+                font-weight: bold;
+                padding: 18px;
+                border: none;
+                background-color: transparent;
+                @include dark-mode {
+                    color: #fff;
+                }
+            }
+
+            /* Apply gradient to the whole row, not individual TH */
+            background: linear-gradient(90deg, rgba($color1, 20%), rgba($color2, 20%));
+        }
+    }
+
+    tbody td {
+        padding: 20px;
+        border: none;
+    }
+
+    tr:nth-child(even) td {
+        background: #fdfdfd;
+        @include dark-mode {
+            background: transparent;
+        }
+    }
+    tr:nth-child(odd) td {
+        background: #fafafa;
+        @include dark-mode {
+            background: #0a0c1b;
+        }
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 700;
+
+        &.check {
+            background: rgba(76, 217, 100, 0.15);
+            color: #4cd964;
+            &::before {
+                content: "✓";
+            }
+        }
+
+        &.cross {
+            background: rgba(255, 59, 48, 0.15);
+            color: #ff3b30;
+            &::before {
+                content: "✗";
+            }
+        }
+    }
+}
+
+.ar-text {
+    font-family: $ar-font;
+}

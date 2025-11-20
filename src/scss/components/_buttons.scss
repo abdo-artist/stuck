@@ -1,0 +1,101 @@
+:root {
+    --c-glass: #ffffff;
+    --c-light: rgb(255 255 255 / 38%);
+    --c-dark: #000;
+
+    --c-content: #224;
+    --c-action: #0052f5;
+
+    --c-bg: #e8e8e9;
+
+    --glass-reflex-dark: 1;
+    --glass-reflex-light: 1;
+
+    --saturation: 150%;
+}
+.btn {
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    font-weight: 500;
+    border: none;
+    min-height: 44px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: all 0.4s ease;
+
+    @extend .gap-1;
+    &-gradient {
+        background-image: linear-gradient(45deg, $color1, $color2);
+        color: #fff;
+        box-shadow: 0px 6px 25px 9px rgba($color2, 35%);
+        &:hover {
+            filter: brightness(1.1);
+            color: #fff;
+        }
+        .icon {
+            color: $color2;
+            background: #fff;
+        }
+    }
+    &-fade {
+        background: rgba(#fff, 0.1);
+        color: #fff;
+        .icon {
+            color: $color2;
+            background: #fff;
+        }
+    }
+    &-glass {
+        color: #fff;
+        box-sizing: border-box;
+        background-color: color-mix(in srgb, var(--c-glass) 12%, transparent);
+        box-shadow:
+            inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
+            inset 1.8px 3px 0px -2px
+                color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 90%), transparent),
+            inset -2px -2px 0px -2px
+                color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 80%), transparent),
+            inset -3px -8px 1px -6px
+                color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 60%), transparent),
+            inset -0.3px -1px 4px 0px
+                color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 12%), transparent),
+            inset -1.5px 2.5px 0px -2px
+                color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+            inset 0px 3px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+            inset 2px -6.5px 1px -4px
+                color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+            0px 1px 5px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+            0px 6px 16px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 8%), transparent);
+        transition:
+            background-color 400ms cubic-bezier(1, 0, 0.4, 1),
+            box-shadow 400ms cubic-bezier(1, 0, 0.4, 1);
+        .icon {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        &.hover,
+        &:hover {
+            color: #fff !important;
+            background-color: var(--bs-btn-hover-bg);
+            border-color: var(--bs-btn-hover-border-color);
+        }
+    }
+
+    &-icon {
+        padding-inline-end: 10px;
+        padding-inline-start: 25px;
+    }
+    .icon {
+        width: 32px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        border-radius: 50%;
+        margin-inline-start: 14px;
+    }
+}

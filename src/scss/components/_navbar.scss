@@ -1,0 +1,68 @@
+.navbar {
+    border-radius: 24px;
+    border: 1px solid hsla(0, 0%, 100%, 40%);
+    position: relative;
+    .shine,
+    .shine::after,
+    .shine::before {
+        --conic: 160deg;
+        --hue: 84;
+        pointer-events: none;
+        border-radius: 0;
+        border-top-right-radius: inherit;
+        border-bottom-left-radius: inherit;
+        border: 1px solid transparent;
+        width: 15%;
+        height: auto;
+        min-height: 0px;
+        aspect-ratio: 1;
+        display: block;
+        position: absolute;
+        right: calc(var(--border) * -1);
+        top: calc(var(--border) * -1);
+        left: auto;
+        z-index: 1;
+        --start: 12%;
+        background: conic-gradient(
+                from var(--conic, -45deg) at center in oklch,
+                transparent var(--start, 0%),
+                $color1,
+                transparent var(--end, 50%)
+            )
+            border-box;
+        -webkit-mask: linear-gradient(transparent), linear-gradient(white);
+        mask: linear-gradient(transparent), linear-gradient(white);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-clip: padding-box, border-box;
+        mask-clip: padding-box, border-box;
+        -webkit-mask-composite: source-out;
+        mask-composite: subtract;
+        height: 100%;
+        border-radius: 24px;
+    }
+    .shine-bottom {
+        top: 0;
+        --border: 1px;
+        bottom: calc(var(--border) * -1);
+        left: calc(var(--border) * -1);
+        right: auto;
+    }
+    .shine-top {
+        background: conic-gradient(
+                from var(--conic, -45deg) at center in oklch,
+                transparent var(--start, 0%),
+                $color2,
+                transparent var(--end, 50%)
+            )
+            border-box;
+        right: -1px;
+        left: inherit;
+        --conic: -22deg;
+        top: 0;
+    }
+    .dropdown-menu {
+        font-size: 0.8rem;
+        min-width: 95px;
+    }
+}
