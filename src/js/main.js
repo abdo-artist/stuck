@@ -99,7 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load saved language
   const savedLang = localStorage.getItem("lang");
-  initOwl(savedLang);
+  if (typeof initOwl === "function") {
+    initOwl(savedLang);
+  }
   if (savedLang) {
     applyLanguage(savedLang);
   }

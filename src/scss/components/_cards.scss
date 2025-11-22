@@ -515,3 +515,25 @@
         font-size: 1.3rem;
     }
 }
+
+.d-card {
+    border-radius: 1rem;
+    background-image: linear-gradient(45deg, rgba($color1, 0.1), rgba($color2, 0.1));
+    padding: 2rem;
+    height: 100%;
+    text-align: center;
+    p {
+        color: #706f99;
+    }
+    i {
+        background-image: linear-gradient(45deg, rgba($color1, 1), rgba($color2, 1));
+        width: 106px;
+        aspect-ratio: 1/1;
+        border-radius: 2rem;
+        color: #fff;
+        font-size: 4rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -269,3 +269,11 @@
 .ar-text {
     font-family: $ar-font;
 }
+
+.text-outline {
+    text-fill-color: transparent;
+    text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    -moz-text-fill-color: transparent;
+}

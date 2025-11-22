@@ -25,6 +25,7 @@
     font-size: 1rem;
     text-transform: capitalize;
     transition: all 0.4s ease;
+    white-space: nowrap;
 
     @extend .gap-1;
     &-gradient {
