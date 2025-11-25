@@ -21,8 +21,14 @@ function initOwl(lang) {
     autoplay: true,
     margin: 15,
     rtl: lang === "ar",
+    autoplayTimeout: 2000, // very fast autoplay
+    autoplaySpeed: 6000, // long smooth sliding
+    autoplayHoverPause: false,
+    slideTransition: "linear", // make it smooth
     responsive: {
-      768: { items: 4 },
+      600: { items: 2 },
+      768: { items: 3 },
+      1200: { items: 4 },
     },
   });
 }
@@ -163,3 +169,39 @@ for (let i = 0; i < 2; i++) {
     testimonialsContainer.appendChild(clone);
   });
 }
+
+function animateCounter(el) {
+  const target = +el.dataset.target;
+  const speed = 50; // smaller = faster
+
+  let count = 0;
+
+  const update = () => {
+    count += Math.ceil(target / speed);
+
+    if (count < target) {
+      el.textContent = count;
+      requestAnimationFrame(update);
+    } else {
+      el.textContent = target;
+    }
+  };
+
+  update();
+}
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.4 }
+);
+
+document.querySelectorAll(".s-counter").forEach((counter) => {
+  observer.observe(counter);
+});

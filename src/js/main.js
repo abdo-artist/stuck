@@ -86,10 +86,24 @@ document.querySelectorAll(".dropdown-item").forEach((item) => {
     updateDarkImages();
   });
 });
-document.querySelectorAll('[data-bs-toggle="popover"]').forEach((el, index) => {
-  let pop = new bootstrap.Popover(el);
-  el.classList.contains("show") && pop.show();
-});
+function initPopovers() {
+  const isMobile = window.innerWidth < 768;
+
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach((el) => {
+    // init popover if not initialized
+    let pop = bootstrap.Popover.getInstance(el) || new bootstrap.Popover(el);
+
+    // only show automatically on desktop
+    if (!isMobile && el.classList.contains("show")) {
+      pop.show();
+    } else {
+      pop.hide(); // ensure hidden on mobile
+    }
+  });
+}
+
+initPopovers();
+window.addEventListener("resize", initPopovers);
 
 document.addEventListener("DOMContentLoaded", () => {
   const langLinks = document.querySelectorAll(".dropdown-item[data-lang]");

@@ -124,10 +124,30 @@ $avatar-size: 32px;
         z-index: auto; // natural stacking order
     }
 }
+.s-marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.s-marquee-track {
+    display: inline-flex;
+    align-items: center;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 .clients {
-    display: flex;
+    // display: flex;
     gap: 10px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     img {
@@ -156,7 +176,7 @@ $avatar-size: 32px;
 }
 .s-padding {
     padding: 80px 0;
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
         padding: 30px 0;
     }
 }
@@ -252,7 +272,7 @@ $avatar-size: 32px;
             }
         }
         @include dark-mode {
-            --color: #13132b !important;
+            --color: #1b1b39 !important;
             background-image: none !important;
         }
         @include rtl-mode {
@@ -413,7 +433,7 @@ $avatar-size: 32px;
             @include rtl-mode {
                 transform: scaleX(-1);
             }
-            @media (max-width: 768px) {
+            @media (max-width: 992px) {
                 display: none;
             }
         }
@@ -423,54 +443,54 @@ $avatar-size: 32px;
                 .icon-wrap {
                     top: 80%;
                     inset-inline-start: 13%;
-                    @media (max-width: 768px) {
+                    @media (max-width: 992px) {
                         top: -126px;
-                        inset-inline-end: 0;
+                        inset-inline-end: 5%;
                         inset-inline-start: initial;
                     }
                 }
             }
             &:nth-child(2) {
                 margin-top: 360px;
-                @media (max-width: 768px) {
+                @media (max-width: 992px) {
                     margin-top: 200px;
                 }
                 .icon-wrap {
                     top: -170%;
                     inset-inline-start: 35%;
-                    @media (max-width: 768px) {
+                    @media (max-width: 992px) {
                         top: -126px;
-                        inset-inline-end: 0;
+                        inset-inline-end: 5%;
                         inset-inline-start: initial;
                     }
                 }
             }
             &:nth-child(3) {
                 margin-top: 220px;
-                @media (max-width: 768px) {
+                @media (max-width: 992px) {
                     margin-top: 200px;
                 }
                 .icon-wrap {
                     top: -200%;
                     inset-inline-start: 22%;
-                    @media (max-width: 768px) {
+                    @media (max-width: 992px) {
                         top: -126px;
-                        inset-inline-end: 0;
+                        inset-inline-end: 5%;
                         inset-inline-start: initial;
                     }
                 }
             }
             &:nth-child(4) {
                 margin-top: 300px;
-                @media (max-width: 768px) {
+                @media (max-width: 992px) {
                     margin-top: 200px;
                 }
                 .icon-wrap {
                     top: -180%;
                     inset-inline-start: 37%;
-                    @media (max-width: 768px) {
+                    @media (max-width: 992px) {
                         top: -126px;
-                        inset-inline-end: 0;
+                        inset-inline-end: 5%;
                         inset-inline-start: initial;
                     }
                 }
@@ -490,6 +510,7 @@ $avatar-size: 32px;
         overflow-x: clip;
         overflow-y: visible;
     }
+
     &:before {
         content: "";
         width: 20%;
@@ -940,7 +961,7 @@ body {
         background-position: center right;
         top: 0;
         z-index: 1;
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
             content: none;
         }
     }
@@ -1253,8 +1274,12 @@ body {
         transform: translateY(-50%);
         inset-inline-end: -20%;
         z-index: -1;
-        @media (max-width:768px) {
-            content:none
+        @media (max-width: 1200px) {
+            // content:none
+            height: 30%;
+        }
+        @media (max-width: 992px) {
+            content: none;
         }
     }
     .overview {
@@ -1282,4 +1307,19 @@ body {
             inset-inline-start: -20%;
         }
     }
+}
+.owl-carousel .owl-stage {
+    display: flex !important;
+}
+
+.owl-carousel .owl-item {
+    display: flex !important; /* Makes the owl-item itself a flex container */
+    flex-direction: column !important; /* Stacks content vertically within the item */
+    height: 100% !important; /* Ensures the item takes full height of its flex parent */
+}
+
+/* If you have specific content wrappers inside your owl-item, apply flex properties to them as well */
+.owl-carousel .owl-item .your-content-wrapper {
+    flex: 1 0 auto !important; /* Allows the content wrapper to grow and shrink */
+    height: 100% !important; /* Ensures the content wrapper takes full height */
 }
